@@ -90,8 +90,8 @@ export default function Footer() {
         <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-gray-500">
           <p>© {new Date().getFullYear()} Meridian Homestay. All rights reserved.</p>
           <div className="flex gap-4 mt-4 md:mt-0">
-            <a href="#" className="hover:text-gray-300">Privacy Policy</a>
-            <a href="#" className="hover:text-gray-300">Terms of Service</a>
+            <Link to="/privacy-policy" className="hover:text-gray-300">Privacy Policy</Link>
+            <Link to="/terms-conditions" className="hover:text-gray-300">Terms of Service</Link>
           </div>
         </div>
       </div>
