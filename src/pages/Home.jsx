@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <>
       <Helmet>
-        <title>Best PG in Newtown Kolkata | Meridian Homestay</title>
+        <title>Meridian Homestay - Best PG in Newtown Kolkata</title>
         <meta name="description" content="Affordable PG in Newtown Kolkata with food, WiFi, AC rooms. Book now at Meridian Homestay for boys, girls, professionals and families." />
       </Helmet>
 
