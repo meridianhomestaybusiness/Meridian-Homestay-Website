@@ -5,13 +5,13 @@ import { X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 // Import images
-import ext1 from '../assets/exterior-1.jpeg';
-import r1 from '../assets/room-1.jpeg';
-import r2 from '../assets/room-2.jpeg';
-import r3 from '../assets/room-3.jpeg';
-import r4 from '../assets/room-4.jpeg';
-import f1 from '../assets/food-1.jpeg';
-import fac1 from '../assets/facility-1.jpeg';
+import ext1 from '../assets/exterior-1.avif';
+import r1 from '../assets/room-1.avif';
+import r2 from '../assets/room-2.webp';
+import r3 from '../assets/room-3.avif';
+import r4 from '../assets/room-4.avif';
+import f1 from '../assets/food-1.avif';
+import fac1 from '../assets/facility-1.avif';
 
 export default function Gallery() {
   const images = [

@@ -3,8 +3,8 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Wifi, Home as HomeIcon, Coffee, Utensils, Droplets, MapPin, Star, ArrowRight } from 'lucide-react';
 
-import room2 from '../assets/room-2.jpeg';
-import exterior1 from '../assets/food-1.jpeg';
+import room2 from '../assets/room-2.webp';
+import exterior1 from '../assets/food-1.avif';
 
 export default function Home() {
   const fadeIn = {
