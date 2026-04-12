@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@theme {
+  --font-heading: "Outfit", sans-serif;
+  --font-body: "Inter", sans-serif;
+
+  --color-primary: #EEF2FF;
+  --color-primary-dark: #C7D2FE;
+  
+  --color-brand: #3b82f6;
+  --color-brand-dark: #2563eb;
+  
+  --color-bg: #FAFAFA;
+
+  --animate-shine: shine 1.5s infinite;
+
+  @keyframes shine {
+    100% { transform: translateX(100%) skewX(-12deg); }
+  }
+}
+
+@layer base {
+  body {
+    @apply font-body text-gray-800 bg-zinc-50 antialiased overflow-x-hidden;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-medium tracking-tight text-gray-900;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-md border border-white/20 shadow-xl;
+  }
+  
+  .glass-nav {
+    @apply bg-white/90 backdrop-blur-md border-b border-gray-100;
+  }
+  
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-700 to-indigo-500;
+  }
+}
