@@ -3,8 +3,11 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Wifi, Home as HomeIcon, Coffee, Utensils, Droplets, MapPin, Star, ArrowRight } from 'lucide-react';
 
-import room2 from '../assets/room-2.webp';
+import room2 from '../assets/room-2.avif';
 import exterior1 from '../assets/food-1.avif';
+import room1 from '../assets/room-1.avif';
+import room3 from '../assets/room-3.avif';
+import extTrue from '../assets/exterior-1.avif';
 
 export default function Home() {
   const fadeIn = {
@@ -236,7 +239,43 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Gallery Preview Section */}
+      <section className="py-24 px-4 md:px-6 bg-zinc-50 overflow-hidden">
+        <div className="container mx-auto">
+          <div className="text-center mb-12 max-w-3xl mx-auto">
+            <h2 className="font-heading text-blue-600 font-semibold tracking-wide uppercase text-sm mb-3">Take a Tour</h2>
+            <h3 className="font-heading text-3xl md:text-4xl font-bold text-gray-900 mb-6">Glimpse of Meridian</h3>
+            <p className="text-gray-600 text-lg">Experience our thoughtfully designed rooms and premium living spaces.</p>
+          </div>
 
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-7xl mx-auto">
+            {[
+              { src: room1, alt: "AC Room Setup" },
+              { src: room2, alt: "Spacious Double Sharing" },
+              { src: room3, alt: "Clean & Furnished Single Bed" },
+              { src: extTrue, alt: "Meridian Homestay Exterior" }
+            ].map((img, idx) => (
+              <motion.div 
+                key={idx}
+                initial="hidden" whileInView="visible" viewport={{ once: true }}
+                variants={{ hidden: { opacity: 0, scale: 0.95 }, visible: { opacity: 1, scale: 1, transition: { delay: idx * 0.1 } } }}
+                className={`relative overflow-hidden rounded-2xl shadow-lg group h-64 ${idx === 1 || idx === 2 ? 'md:col-span-2 lg:col-span-1' : ''}`}
+              >
+                <img src={img.src} alt={img.alt} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" loading="lazy" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                   <p className="text-white font-medium text-sm drop-shadow-md transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">{img.alt}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+          
+          <div className="text-center mt-12">
+            <Link to="/gallery" className="px-8 py-4 bg-white border border-gray-200 text-gray-900 rounded-full font-bold hover:bg-gray-50 transition-colors shadow-sm inline-flex items-center gap-2">
+              View Full Gallery
+            </Link>
+          </div>
+        </div>
+      </section>
 
       {/* Map Embed Section */}
       <section className="py-24 px-4 md:px-6 bg-white overflow-hidden">

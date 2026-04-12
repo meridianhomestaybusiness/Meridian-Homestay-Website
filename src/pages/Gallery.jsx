@@ -7,7 +7,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 // Import images
 import ext1 from '../assets/exterior-1.avif';
 import r1 from '../assets/room-1.avif';
-import r2 from '../assets/room-2.webp';
+import r2 from '../assets/room-2.avif';
 import r3 from '../assets/room-3.avif';
 import r4 from '../assets/room-4.avif';
 import f1 from '../assets/food-1.avif';
