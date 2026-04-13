@@ -40,7 +40,7 @@ export default function Home() {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] lg:min-h-[85vh] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[100vh] lg:min-h-[85vh] flex items-center justify-center overflow-hidden">
         {/* Background Image with animated scale effect */}
         <div className="absolute inset-0 z-0">
           <motion.img
