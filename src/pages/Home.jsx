@@ -1,134 +1,207 @@
-import { Helmet } from 'react-helmet-async';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { Wifi, Home as HomeIcon, Coffee, Utensils, Droplets, MapPin, Star, ArrowRight } from 'lucide-react';
+import { Helmet } from "react-helmet-async";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import {
+  Wifi,
+  Home as HomeIcon,
+  Coffee,
+  Utensils,
+  Droplets,
+  MapPin,
+  Star,
+  ArrowRight,
+} from "lucide-react";
 
-import room2 from '../assets/room-2.avif';
-import exterior1 from '../assets/food-1.avif';
-import room1 from '../assets/room-1.avif';
-import room3 from '../assets/room-3.avif';
-import extTrue from '../assets/exterior-1.avif';
+import room2 from "../assets/room-2.avif";
+import exterior1 from "../assets/pg_img4.avif";
+import heroImg from "../assets/hero_img.avif";
+import p1 from "../assets/pg_img.avif";
+import p3 from "../assets/pg_img3.avif";
+import p4 from "../assets/pg_img4.avif";
+import p5 from "../assets/pg_img5.avif";
+import p6 from "../assets/pg_img6.avif";
+import p7 from "../assets/pg_img7.avif";
+import p8 from "../assets/pg_img8.avif";
 
 export default function Home() {
   const fadeIn = {
     hidden: { opacity: 0, y: 30 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
   };
 
   return (
     <>
       <Helmet>
         <title>Meridian Homestay - Best PG in Newtown Kolkata</title>
-        <meta name="description" content="Affordable PG in Newtown Kolkata with food, WiFi, AC rooms. Book now at Meridian Homestay for boys, girls, professionals and families." />
+        <meta
+          name="description"
+          content="Affordable PG in Newtown Kolkata with food, WiFi, AC rooms. Book now at Meridian Homestay for boys, girls, professionals and families."
+        />
       </Helmet>
 
       {/* Hero Section */}
       <section className="relative min-h-[90vh] lg:min-h-[85vh] flex items-center justify-center overflow-hidden">
         {/* Background Image with animated scale effect */}
         <div className="absolute inset-0 z-0">
-          <motion.img 
+          <motion.img
             initial={{ scale: 1.1 }}
             animate={{ scale: 1 }}
-            transition={{ duration: 10, ease: "easeOut" }}
-            src={room2} 
-            alt="Comfortable PG Room in Newtown" 
-            className="w-full h-full object-cover"
+            transition={{ duration: 15, ease: "easeOut" }}
+            src={heroImg}
+            alt="Beautiful Meridian Homestay Premium PG Room"
+            className="w-full h-full object-cover object-center"
           />
-          {/* Dark gradient overlay for text readability */}
-          <div className="absolute inset-0 bg-gradient-to-b from-gray-900/80 via-gray-900/60 to-gray-900/90"></div>
+          {/* Professional Overlay Treatment */}
+          <div className="absolute inset-0 bg-slate-950/50 z-[1]"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-slate-950/70 via-slate-950/20 to-slate-950/80 z-[1]"></div>
+          
+          {/* Animated Glow Elements (Subtle) */}
+          <motion.div 
+            animate={{ scale: [1, 1.1, 1], opacity: [0.1, 0.2, 0.1] }} 
+            transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+            className="absolute top-1/3 -left-20 w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[120px] z-[2]"
+          ></motion.div>
         </div>
 
-        <div className="container mx-auto px-4 md:px-6 relative z-10 flex flex-col items-center text-center mt-8">
-          <motion.div 
+        <div className="container mx-auto px-4 md:px-6 relative z-10 flex flex-col items-center text-center mt-12">
+          <motion.div
             initial="hidden"
             animate="visible"
             variants={fadeIn}
-            className="max-w-4xl flex flex-col items-center"
+            className="max-w-5xl flex flex-col items-center"
           >
-            {/* Glowing Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-blue-200 font-medium text-sm md:text-base mb-8 shadow-[0_0_15px_rgba(59,130,246,0.3)]">
-              <Star className="w-4 h-4 fill-current text-yellow-400" />
-              <span>Premium Accommodation in Kolkata</span>
-            </div>
-            
-            {/* Main Headline */}
-            <h1 className="font-heading text-5xl md:text-7xl lg:text-[5rem] font-bold text-white leading-[1.1] tracking-tight mb-8 drop-shadow-lg">
-              Elevate Your Stay in <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-300">Newtown</span>
+            {/* Refined Agency-level Badge */}
+            <motion.div 
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              className="inline-flex items-center gap-3 px-5 py-1.5 rounded-full bg-white/5 backdrop-blur-xl border border-white/10 text-white font-bold text-[0.65rem] md:text-xs tracking-[0.2em] uppercase mb-10 shadow-2xl"
+            >
+              <div className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse"></div>
+              <span>Premium Accommodation Kolkata</span>
+            </motion.div>
+
+            {/* Main Headline - Ultra Cinematic (Responsive) */}
+            <h1 className="font-heading text-6xl md:text-6xl lg:text-[6.5rem] font-bold text-white leading-[1.1] md:leading-[0.9] tracking-tight md:tracking-[-0.04em] mb-8 md:mb-12 drop-shadow-sm">
+              Elevate Your Stay in{" "}
+              <br className="hidden md:block" />
+              <span className="relative inline-block text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-white to-indigo-200">
+                Newtown
+              </span>
             </h1>
-            
-            {/* Subtext */}
-            <p className="text-lg md:text-2xl text-gray-200 mb-12 max-w-2xl font-light leading-relaxed drop-shadow-md">
-              Experience the perfect blend of comfort, hygiene, and modern amenities. Fully furnished rooms with home-cooked food.
-            </p>
-            
-            {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-5 w-full sm:w-auto">
-              <a 
+
+            {/* Subtext - High-end Visibility Refinement (Responsive) */}
+            <div className="relative mb-12 md:mb-20 max-w-3xl mx-auto w-full">
+              <div className="absolute inset-0 bg-white/[0.02] backdrop-blur-[3px] rounded-[1.5rem] md:rounded-[2rem] border border-white/5 shadow-2xl"></div>
+              <p className="relative z-10 text-base md:text-xl lg:text-2xl text-white/90 font-medium leading-relaxed px-6 py-5 md:px-8 md:py-6 tracking-wide">
+                Experience the perfect blend of luxury, comfort, and modern amenities. Premium, fully furnished rooms with hygienic home-cooked meals <span className="text-white border-b border-blue-400 pb-1">tailored for a better lifestyle.</span>
+              </p>
+            </div>
+
+            {/* CTAs (Responsive) */}
+            <div className="flex flex-col sm:flex-row gap-4 md:gap-6 w-full sm:w-auto items-center">
+              <motion.a
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
                 href="https://wa.me/916290381799"
                 target="_blank"
                 rel="noreferrer"
-                className="px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white rounded-full font-bold text-lg transition-all shadow-xl shadow-blue-600/40 hover:-translate-y-1 hover:shadow-blue-600/60 flex items-center justify-center gap-2 min-w-[200px]"
+                className="px-8 py-4 md:px-10 md:py-5 bg-blue-600 hover:bg-blue-500 text-white rounded-xl md:rounded-2xl font-bold text-base md:text-lg transition-all shadow-2xl shadow-blue-600/30 flex items-center justify-center gap-3 w-full sm:min-w-[240px]"
               >
-                Book via WhatsApp
-              </a>
-              <a 
+                <span>Book via WhatsApp</span>
+                <ArrowRight className="w-5 h-5" />
+              </motion.a>
+              <motion.a
+                whileHover={{ scale: 1.02, backgroundColor: "rgba(255,255,255,0.15)" }}
+                whileTap={{ scale: 0.98 }}
                 href="tel:+918282895500"
-                className="px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-xl border border-white/20 text-white rounded-full font-bold text-lg transition-all hover:-translate-y-1 flex items-center justify-center gap-2 min-w-[200px]"
+                className="px-8 py-4 md:px-10 md:py-5 bg-white/10 backdrop-blur-3xl border border-white/20 text-white rounded-xl md:rounded-2xl font-bold text-base md:text-lg transition-all flex items-center justify-center gap-3 w-full sm:min-w-[240px]"
               >
                 Call Now
-              </a>
+              </motion.a>
             </div>
           </motion.div>
         </div>
-
-        
       </section>
 
       {/* About Section */}
       <section className="py-24 px-4 md:px-6 bg-white overflow-hidden">
         <div className="container mx-auto">
           <div className="flex flex-col lg:flex-row gap-16 items-center">
-            <motion.div 
-              initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeIn}
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
+              variants={fadeIn}
               className="lg:w-1/2 relative"
             >
               <div className="absolute -top-6 -left-6 w-32 h-32 bg-blue-100 rounded-full mix-blend-multiply blur-2xl opacity-70"></div>
               <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-indigo-100 rounded-full mix-blend-multiply blur-2xl opacity-70"></div>
-              <img src={exterior1} alt="Meridian Homestay Building" className="rounded-3xl shadow-2xl relative z-10 object-cover h-[500px] w-full" />
+              <img
+                src={exterior1}
+                alt="Meridian Homestay Building"
+                className="rounded-3xl shadow-2xl relative z-10 object-cover h-[500px] w-full"
+              />
               <div className="absolute -bottom-10 -left-10 glass-card p-6 rounded-2xl z-20 hidden md:block">
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center">
                     <Star className="w-6 h-6 fill-current" />
                   </div>
                   <div>
-                    <p className="font-heading font-bold text-2xl text-gray-900">4.9/5</p>
-                    <p className="text-gray-500 font-medium text-sm text-center">Top Rated</p>
+                    <p className="font-heading font-bold text-2xl text-gray-900">
+                      4.9/5
+                    </p>
+                    <p className="text-gray-500 font-medium text-sm text-center">
+                      Top Rated
+                    </p>
                   </div>
                 </div>
               </div>
             </motion.div>
-            
-            <motion.div 
-              initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeIn}
+
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
+              variants={fadeIn}
               className="lg:w-1/2 space-y-6"
             >
-              <h2 className="font-heading text-blue-600 font-semibold tracking-wide uppercase text-sm">About Us</h2>
-              <h3 className="font-heading text-3xl md:text-4xl font-bold text-gray-900 leading-tight">Your Home Away From Home</h3>
+              <h2 className="font-heading text-blue-600 font-semibold tracking-wide uppercase text-sm">
+                About Us
+              </h2>
+              <h3 className="font-heading text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
+                Your Home Away From Home
+              </h3>
               <p className="text-gray-600 text-lg leading-relaxed">
-                Welcome to Meridian Homestay, a premium PG accommodation located in the heart of Newtown, Kolkata. We provide a safe, comfortable, and modern living environment tailored for working professionals, students, and families.
+                Welcome to Meridian Homestay, a premium PG accommodation located
+                in the heart of Newtown, Kolkata. We provide a safe,
+                comfortable, and modern living environment tailored for working
+                professionals, students, and families.
               </p>
               <p className="text-gray-600 text-lg leading-relaxed">
-                Experience hassle-free living with our all-inclusive amenities. Relax in well-furnished rooms, enjoy hygienic home-cooked meals, and stay connected with high-speed internet.
+                Experience hassle-free living with our all-inclusive amenities.
+                Relax in well-furnished rooms, enjoy hygienic home-cooked meals,
+                and stay connected with high-speed internet.
               </p>
               <ul className="grid grid-cols-2 gap-4 pt-6">
                 {[
-                  'Fully Furnished Rooms', 'Hygienic Food', 
-                  '24/7 Security', 'Prime Location'
+                  "Fully Furnished Rooms",
+                  "Hygienic Food",
+                  "24/7 Security",
+                  "Prime Location",
                 ].map((item, i) => (
                   <li key={i} className="flex items-center gap-3">
                     <div className="w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 shrink-0">
-                      <svg className="w-4 h-4" viewBox="0 0 20 20" fill="currentColor">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      <svg
+                        className="w-4 h-4"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                          clipRule="evenodd"
+                        />
                       </svg>
                     </div>
                     <span className="text-gray-700 font-medium">{item}</span>
@@ -136,10 +209,13 @@ export default function Home() {
                 ))}
               </ul>
               <div className="pt-6">
-                 <Link to="/facilities" className="inline-flex items-center gap-2 text-blue-600 font-semibold hover:text-blue-700 transition-colors group">
-                    Explore our facilities 
-                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                 </Link>
+                <Link
+                  to="/facilities"
+                  className="inline-flex items-center gap-2 text-blue-600 font-semibold hover:text-blue-700 transition-colors group"
+                >
+                  Explore our facilities
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </Link>
               </div>
             </motion.div>
           </div>
@@ -150,59 +226,132 @@ export default function Home() {
       <section className="py-24 px-4 md:px-6 bg-zinc-50 relative">
         <div className="container mx-auto">
           <div className="text-center mb-16 max-w-3xl mx-auto">
-            <h2 className="font-heading text-blue-600 font-semibold tracking-wide uppercase text-sm mb-3">Our Pricing</h2>
-            <h3 className="font-heading text-3xl md:text-4xl font-bold text-gray-900 mb-6">Affordable & Transparent</h3>
-            <p className="text-gray-600 text-lg">Choose a plan that fits your lifestyle. All our plans provide exceptional value and comfort.</p>
+            <h2 className="font-heading text-blue-600 font-semibold tracking-wide uppercase text-sm mb-3">
+              Our Pricing
+            </h2>
+            <h3 className="font-heading text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              Affordable & Transparent
+            </h3>
+            <p className="text-gray-600 text-lg">
+              Choose a plan that fits your lifestyle. All our plans provide
+              exceptional value and comfort.
+            </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {/* Card 1 */}
-            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn} className="bg-white rounded-3xl p-8 border border-gray-100 shadow-xl shadow-gray-200/50 hover:-translate-y-2 transition-transform duration-300">
-              <h4 className="font-heading text-xl font-bold text-gray-900 mb-2">Double Sharing</h4>
-              <p className="text-gray-500 mb-6 font-medium text-sm">Perfect for students & professionals</p>
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fadeIn}
+              className="bg-white rounded-3xl p-8 border border-gray-100 shadow-xl shadow-gray-200/50 hover:-translate-y-2 transition-transform duration-300"
+            >
+              <h4 className="font-heading text-xl font-bold text-gray-900 mb-2">
+                Double Sharing
+              </h4>
+              <p className="text-gray-500 mb-6 font-medium text-sm">
+                Perfect for students & professionals
+              </p>
               <div className="mb-8">
                 <span className="text-4xl font-bold text-gray-900">₹7,000</span>
                 <span className="text-gray-500 font-medium">/month</span>
               </div>
               <ul className="space-y-4 mb-8">
-                <li className="flex items-center gap-3 text-gray-600"><Utensils className="w-5 h-5 text-blue-500" /> Food Included</li>
-                <li className="flex items-center gap-3 text-gray-600"><Wifi className="w-5 h-5 text-blue-500" /> Free WiFi</li>
-                <li className="flex items-center gap-3 text-gray-600"><HomeIcon className="w-5 h-5 text-blue-500" /> Fully Furnished</li>
+                <li className="flex items-center gap-3 text-gray-600">
+                  <Utensils className="w-5 h-5 text-blue-500" /> Food Included
+                </li>
+                <li className="flex items-center gap-3 text-gray-600">
+                  <Wifi className="w-5 h-5 text-blue-500" /> Free WiFi
+                </li>
+                <li className="flex items-center gap-3 text-gray-600">
+                  <HomeIcon className="w-5 h-5 text-blue-500" /> Fully Furnished
+                </li>
               </ul>
-              <Link to="/rooms" className="block w-full py-3 px-6 text-center text-blue-600 bg-blue-50 hover:bg-blue-100 font-semibold rounded-xl transition-colors">View Details</Link>
+              <Link
+                to="/rooms"
+                className="block w-full py-3 px-6 text-center text-blue-600 bg-blue-50 hover:bg-blue-100 font-semibold rounded-xl transition-colors"
+              >
+                View Details
+              </Link>
             </motion.div>
 
             {/* Card 2 */}
-            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn} className="bg-blue-600 rounded-3xl p-8 border border-blue-500 shadow-xl shadow-blue-600/30 hover:-translate-y-2 transition-transform duration-300 relative overflow-hidden text-white">
-              <div className="absolute top-0 right-0 bg-yellow-400 text-yellow-900 text-xs font-bold px-3 py-1 rounded-bl-lg uppercase tracking-wider">Popular</div>
-              <h4 className="font-heading text-xl font-bold mb-2">Single Bed</h4>
-              <p className="text-blue-200 mb-6 font-medium text-sm">Experience maximum comfort</p>
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fadeIn}
+              className="bg-blue-600 rounded-3xl p-8 border border-blue-500 shadow-xl shadow-blue-600/30 hover:-translate-y-2 transition-transform duration-300 relative overflow-hidden text-white"
+            >
+              <div className="absolute top-0 right-0 bg-yellow-400 text-yellow-900 text-xs font-bold px-3 py-1 rounded-bl-lg uppercase tracking-wider">
+                Popular
+              </div>
+              <h4 className="font-heading text-black text-xl font-bold mb-2">
+                Single Bed
+              </h4>
+              <p className="text-blue-200 mb-6 font-medium text-sm">
+                Experience maximum comfort
+              </p>
               <div className="mb-8">
                 <span className="text-4xl font-bold">₹10,000</span>
                 <span className="text-blue-200 font-medium">/month</span>
               </div>
               <ul className="space-y-4 mb-8">
-                <li className="flex items-center gap-3"><Utensils className="w-5 h-5 text-yellow-400" /> Food Included</li>
-                <li className="flex items-center gap-3"><Wifi className="w-5 h-5 text-yellow-400" /> Free WiFi</li>
-                <li className="flex items-center gap-3"><HomeIcon className="w-5 h-5 text-yellow-400" /> Fully Furnished</li>
+                <li className="flex items-center gap-3">
+                  <Utensils className="w-5 h-5 text-yellow-400" /> Food Included
+                </li>
+                <li className="flex items-center gap-3">
+                  <Wifi className="w-5 h-5 text-yellow-400" /> Free WiFi
+                </li>
+                <li className="flex items-center gap-3">
+                  <HomeIcon className="w-5 h-5 text-yellow-400" /> Fully
+                  Furnished
+                </li>
               </ul>
-              <Link to="/rooms" className="block w-full py-3 px-6 text-center text-blue-600 bg-white hover:bg-gray-50 font-semibold rounded-xl transition-colors">View Details</Link>
+              <Link
+                to="/rooms"
+                className="block w-full py-3 px-6 text-center text-blue-600 bg-white hover:bg-gray-50 font-semibold rounded-xl transition-colors"
+              >
+                View Details
+              </Link>
             </motion.div>
 
             {/* Card 3 */}
-             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn} className="bg-white rounded-3xl p-8 border border-gray-100 shadow-xl shadow-gray-200/50 hover:-translate-y-2 transition-transform duration-300">
-              <h4 className="font-heading text-xl font-bold text-gray-900 mb-2">Single Bed (No Food)</h4>
-              <p className="text-gray-500 mb-6 font-medium text-sm">Flexible & budget friendly</p>
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fadeIn}
+              className="bg-white rounded-3xl p-8 border border-gray-100 shadow-xl shadow-gray-200/50 hover:-translate-y-2 transition-transform duration-300"
+            >
+              <h4 className="font-heading text-xl font-bold text-gray-900 mb-2">
+                Single Bed (No Food)
+              </h4>
+              <p className="text-gray-500 mb-6 font-medium text-sm">
+                Flexible & budget friendly
+              </p>
               <div className="mb-8">
                 <span className="text-4xl font-bold text-gray-900">₹5,000</span>
                 <span className="text-gray-500 font-medium">/month</span>
               </div>
               <ul className="space-y-4 mb-8">
-                <li className="flex items-center gap-3 text-gray-400 line-through"><Utensils className="w-5 h-5 opacity-50" /> Food Included</li>
-                <li className="flex items-center gap-3 text-gray-600"><Wifi className="w-5 h-5 text-blue-500" /> Free WiFi</li>
-                <li className="flex items-center gap-3 text-gray-600"><HomeIcon className="w-5 h-5 text-blue-500" /> Fully Furnished</li>
+                <li className="flex items-center gap-3 text-gray-400 line-through">
+                  <Utensils className="w-5 h-5 opacity-50" /> Food Included
+                </li>
+                <li className="flex items-center gap-3 text-gray-600">
+                  <Wifi className="w-5 h-5 text-blue-500" /> Free WiFi
+                </li>
+                <li className="flex items-center gap-3 text-gray-600">
+                  <HomeIcon className="w-5 h-5 text-blue-500" /> Fully Furnished
+                </li>
               </ul>
-              <Link to="/rooms" className="block w-full py-3 px-6 text-center text-blue-600 bg-blue-50 hover:bg-blue-100 font-semibold rounded-xl transition-colors">View Details</Link>
+              <Link
+                to="/rooms"
+                className="block w-full py-3 px-6 text-center text-blue-600 bg-blue-50 hover:bg-blue-100 font-semibold rounded-xl transition-colors"
+              >
+                View Details
+              </Link>
             </motion.div>
           </div>
         </div>
@@ -212,26 +361,38 @@ export default function Home() {
       <section className="py-24 px-4 md:px-6 bg-white">
         <div className="container mx-auto">
           <div className="text-center mb-16 max-w-3xl mx-auto">
-             <h2 className="font-heading text-blue-600 font-semibold tracking-wide uppercase text-sm mb-3">Premium Amenities</h2>
-             <h3 className="font-heading text-3xl md:text-4xl font-bold text-gray-900 mb-6">Everything You Need</h3>
+            <h2 className="font-heading text-blue-600 font-semibold tracking-wide uppercase text-sm mb-3">
+              Premium Amenities
+            </h2>
+            <h3 className="font-heading text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              Everything You Need
+            </h3>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
             {[
-              { icon: Wifi, label: 'Free WiFi' },
-              { icon: Droplets, label: '24hr Water' },
-              { icon: Utensils, label: 'Daily Meals' },
-              { icon: Coffee, label: 'AC Rooms' },
+              { icon: Wifi, label: "Free WiFi" },
+              { icon: Droplets, label: "24hr Water" },
+              { icon: Utensils, label: "Daily Meals" },
+              { icon: Coffee, label: "AC Rooms" },
             ].map((facility, idx) => (
-              <div key={idx} className="p-6 rounded-2xl bg-zinc-50 border border-gray-100 text-center hover:shadow-lg transition-shadow group cursor-default">
+              <div
+                key={idx}
+                className="p-6 rounded-2xl bg-zinc-50 border border-gray-100 text-center hover:shadow-lg transition-shadow group cursor-default"
+              >
                 <div className="w-14 h-14 mx-auto bg-white rounded-xl shadow-sm flex items-center justify-center text-blue-600 mb-4 group-hover:scale-110 transition-transform">
                   <facility.icon className="w-7 h-7" />
                 </div>
-                <h4 className="font-heading font-semibold text-gray-900">{facility.label}</h4>
+                <h4 className="font-heading font-semibold text-gray-900">
+                  {facility.label}
+                </h4>
               </div>
             ))}
           </div>
           <div className="mt-12 text-center">
-            <Link to="/facilities" className="inline-flex items-center gap-2 text-blue-600 font-semibold hover:text-blue-700 transition-colors group">
+            <Link
+              to="/facilities"
+              className="inline-flex items-center gap-2 text-blue-600 font-semibold hover:text-blue-700 transition-colors group"
+            >
               View all 10+ facilities
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
@@ -243,34 +404,64 @@ export default function Home() {
       <section className="py-24 px-4 md:px-6 bg-zinc-50 overflow-hidden">
         <div className="container mx-auto">
           <div className="text-center mb-12 max-w-3xl mx-auto">
-            <h2 className="font-heading text-blue-600 font-semibold tracking-wide uppercase text-sm mb-3">Take a Tour</h2>
-            <h3 className="font-heading text-3xl md:text-4xl font-bold text-gray-900 mb-6">Glimpse of Meridian</h3>
-            <p className="text-gray-600 text-lg">Experience our thoughtfully designed rooms and premium living spaces.</p>
+            <h2 className="font-heading text-blue-600 font-semibold tracking-wide uppercase text-sm mb-3">
+              Take a Tour
+            </h2>
+            <h3 className="font-heading text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              Glimpse of Meridian
+            </h3>
+            <p className="text-gray-600 text-lg">
+              Experience our thoughtfully designed rooms and premium living
+              spaces.
+            </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-7xl mx-auto">
             {[
-              { src: room1, alt: "AC Room Setup" },
-              { src: room2, alt: "Spacious Double Sharing" },
-              { src: room3, alt: "Clean & Furnished Single Bed" },
-              { src: extTrue, alt: "Meridian Homestay Exterior" }
+              { src: room2, alt: "AC Room Setup" },
+              { src: p5, alt: "Spacious Double Sharing" },
+              { src: p6, alt: "Clean & Furnished Single Bed" },
+              { src: p7, alt: "Premium Comfort Area" },
+              { src: p1, alt: "Cozy Room Interior" },
+              { src: p3, alt: "Furnished PG Room" },
+              { src: p4, alt: "Comfortable Twin Bed" },
+              { src: p8, alt: "Relaxing PG Atmosphere" },
             ].map((img, idx) => (
-              <motion.div 
+              <motion.div
                 key={idx}
-                initial="hidden" whileInView="visible" viewport={{ once: true }}
-                variants={{ hidden: { opacity: 0, scale: 0.95 }, visible: { opacity: 1, scale: 1, transition: { delay: idx * 0.1 } } }}
-                className={`relative overflow-hidden rounded-2xl shadow-lg group h-64 ${idx === 1 || idx === 2 ? 'md:col-span-2 lg:col-span-1' : ''}`}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={{
+                  hidden: { opacity: 0, scale: 0.95 },
+                  visible: {
+                    opacity: 1,
+                    scale: 1,
+                    transition: { delay: (idx % 4) * 0.1 },
+                  },
+                }}
+                className="relative overflow-hidden rounded-2xl shadow-lg group h-64"
               >
-                <img src={img.src} alt={img.alt} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" loading="lazy" />
+                <img
+                  src={img.src}
+                  alt={img.alt}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                  loading="lazy"
+                />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                   <p className="text-white font-medium text-sm drop-shadow-md transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">{img.alt}</p>
+                  <p className="text-white font-medium text-sm drop-shadow-md transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                    {img.alt}
+                  </p>
                 </div>
               </motion.div>
             ))}
           </div>
-          
+
           <div className="text-center mt-12">
-            <Link to="/gallery" className="px-8 py-4 bg-white border border-gray-200 text-gray-900 rounded-full font-bold hover:bg-gray-50 transition-colors shadow-sm inline-flex items-center gap-2">
+            <Link
+              to="/gallery"
+              className="px-8 py-4 bg-white border border-gray-200 text-gray-900 rounded-full font-bold hover:bg-gray-50 transition-colors shadow-sm inline-flex items-center gap-2"
+            >
               View Full Gallery
             </Link>
           </div>
@@ -280,31 +471,41 @@ export default function Home() {
       {/* Map Embed Section */}
       <section className="py-24 px-4 md:px-6 bg-white overflow-hidden">
         <div className="container mx-auto">
-           <div className="flex flex-col lg:flex-row gap-12 items-center bg-zinc-50 rounded-3xl p-6 md:p-10 border border-gray-100 shadow-xl">
-             <div className="lg:w-1/2 space-y-6">
-               <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 text-blue-700 rounded-lg font-semibold text-sm">
-                  <MapPin className="w-4 h-4" /> Discover Our Location
-               </div>
-               <h3 className="font-heading text-3xl font-bold text-gray-900 leading-tight">Conveniently Located in Newtown</h3>
-               <p className="text-gray-600 text-lg">
-                 Situated in Dharmatala Panchuria, our PG is centrally located near top IT parks, colleges, and shopping centers keeping you close to everything you need.
-               </p>
-               <a 
-                 href="https://maps.app.goo.gl/uwxMc6MwNmJEXVxMA?g_st=ic" 
-                 target="_blank" rel="noreferrer"
-                 className="inline-block mt-4 px-6 py-3 bg-gray-900 text-white font-semibold rounded-xl hover:bg-black transition-colors"
-               >
-                 Get Directions
-               </a>
-             </div>
-             <div className="lg:w-1/2 w-full h-[400px] rounded-2xl overflow-hidden shadow-inner border border-gray-200">
-                <iframe 
-                  src="https://maps.google.com/maps?q=Dharmatala%20Panchuria,%20Newtown,%20Kolkata&t=&z=15&ie=UTF8&iwloc=&output=embed" 
-                  width="100%" height="100%" style={{ border: 0 }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"
-                  title="Meridian Homestay Location"
-                ></iframe>
-             </div>
-           </div>
+          <div className="flex flex-col lg:flex-row gap-12 items-center bg-zinc-50 rounded-3xl p-6 md:p-10 border border-gray-100 shadow-xl">
+            <div className="lg:w-1/2 space-y-6">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 text-blue-700 rounded-lg font-semibold text-sm">
+                <MapPin className="w-4 h-4" /> Discover Our Location
+              </div>
+              <h3 className="font-heading text-3xl font-bold text-gray-900 leading-tight">
+                Conveniently Located in Newtown
+              </h3>
+              <p className="text-gray-600 text-lg">
+                Located in Dharmatala Panchuria, our PG offers excellent
+                connectivity and is just a 2-minute walk from Downtown Shopping
+                Mall, ensuring convenience at your doorstep.
+              </p>
+              <a
+                href="https://maps.app.goo.gl/uwxMc6MwNmJEXVxMA?g_st=ic"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-block mt-4 px-6 py-3 bg-gray-900 text-white font-semibold rounded-xl hover:bg-black transition-colors"
+              >
+                Get Directions
+              </a>
+            </div>
+            <div className="lg:w-1/2 w-full h-[400px] rounded-2xl overflow-hidden shadow-inner border border-gray-200">
+              <iframe
+                src="https://maps.google.com/maps?q=Dharmatala%20Panchuria,%20Newtown,%20Kolkata&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Meridian Homestay Location"
+              ></iframe>
+            </div>
+          </div>
         </div>
       </section>
     </>
