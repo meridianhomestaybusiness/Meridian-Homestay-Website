@@ -22,10 +22,8 @@ import p8 from "../assets/pg_img8.avif";
 
 export default function Gallery() {
   const images = [
-    { src: r1, alt: "AC Room Setup" },
     { src: r2, alt: "Spacious Double Sharing" },
-    { src: r3, alt: "Clean & Furnished Single Bed" },
-    { src: r4, alt: "Comfortable Stay Area" },
+
     { src: ext1, alt: "Meridian Homestay Exterior" },
     { src: f1, alt: "Hygienic Home Cooked Meals" },
     { src: fac1, alt: "Common Facilities Area" },
@@ -33,9 +31,13 @@ export default function Gallery() {
     { src: p3, alt: "Furnished PG Room" },
     { src: p4, alt: "Comfortable Twin Bed" },
     { src: p5, alt: "Secure Living Space" },
+    { src: r3, alt: "Clean & Furnished Single Bed" },
+
     { src: p6, alt: "Clean Washroom Area" },
     { src: p7, alt: "Bright and Airy Room" },
     { src: p8, alt: "Relaxing PG Atmosphere" },
+    { src: r4, alt: "Comfortable Stay Area" },
+    { src: r1, alt: "AC Room Setup" },
   ];
 
   const [selectedImage, setSelectedImage] = useState(null);
