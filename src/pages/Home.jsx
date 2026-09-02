@@ -480,12 +480,10 @@ export default function Home() {
                 Conveniently Located in Newtown
               </h3>
               <p className="text-gray-600 text-lg">
-                Located in Dharmatala Panchuria, our PG offers excellent
-                connectivity and is just a 2-minute walk from Downtown Shopping
-                Mall, ensuring convenience at your doorstep.
+                Located at Jagannath Mandir, Karigari Bhawan, near Hazra Kalibari Road, Action Area III, Newtown, Kolkata, Dharmatala Pachuria, West Bengal 700160, our PG offers excellent connectivity and convenience at your doorstep.
               </p>
               <a
-                href="https://maps.app.goo.gl/uwxMc6MwNmJEXVxMA?g_st=ic"
+                href="https://maps.app.goo.gl/5EC2Q68fadFV59Aq9"
                 target="_blank"
                 rel="noreferrer"
                 className="inline-block mt-4 px-6 py-3 bg-gray-900 text-white font-semibold rounded-xl hover:bg-black transition-colors"
@@ -495,13 +493,13 @@ export default function Home() {
             </div>
             <div className="lg:w-1/2 w-full h-[400px] rounded-2xl overflow-hidden shadow-inner border border-gray-200">
               <iframe
-                src="https://maps.google.com/maps?q=Dharmatala%20Panchuria,%20Newtown,%20Kolkata&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3684.618710030391!2d88.4924561!3d22.555951600000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a020b89cd259dd1%3A0x1c8745027220a0e2!2sMeridian%20Homestay%20%26%20PG!5e0!3m2!1sen!2sin!4v1788345960187!5m2!1sen!2sin"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
                 allowFullScreen=""
                 loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
+                referrerPolicy="strict-origin-when-cross-origin"
                 title="Meridian Homestay Location"
               ></iframe>
             </div>

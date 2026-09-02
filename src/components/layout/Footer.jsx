@@ -72,11 +72,17 @@ export default function Footer() {
             <ul className="space-y-4 text-sm">
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-blue-400 shrink-0 mt-0.5" />
-                <span className="text-gray-400 leading-relaxed">
-                  Dharmatala Panchuria,<br />
-                  Newtown, Kolkata,<br />
-                  West Bengal
-                </span>
+                <a 
+                  href="https://maps.app.goo.gl/5EC2Q68fadFV59Aq9" 
+                  target="_blank" 
+                  rel="noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors leading-relaxed"
+                >
+                  Jagannath Mandir, Karigari Bhawan,<br />
+                  near Hazra Kalibari Road, Action Area III,<br />
+                  Newtown, Kolkata, Dharmatala Pachuria,<br />
+                  West Bengal 700160
+                </a>
               </li>
               <li className="flex items-center gap-3 text-gray-400">
                 <Clock className="w-5 h-5 text-blue-400 shrink-0" />

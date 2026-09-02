@@ -19,7 +19,7 @@ export default function Contact() {
     <>
       <Helmet>
         <title>Contact Us | Meridian Homestay</title>
-        <meta name="description" content="Get in touch with Meridian Homestay. Address: Dharmatala Panchuria, Newtown. Call or WhatsApp us to book your fast stay." />
+        <meta name="description" content="Get in touch with Meridian Homestay. Address: Jagannath Mandir, Karigari Bhawan, near Hazra Kalibari Road, Action Area III, Newtown, Kolkata, Dharmatala Pachuria, West Bengal 700160. Call or WhatsApp us to book your fast stay." />
       </Helmet>
 
       <PageHeader 
@@ -77,15 +77,17 @@ export default function Contact() {
                   </a>
 
                   {/* Address */}
-                  <div className="flex items-start gap-4 p-4 rounded-2xl bg-zinc-50 border border-gray-100 hover:shadow-md transition-shadow cursor-default">
-                    <div className="w-12 h-12 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center shrink-0">
+                  <a href="https://maps.app.goo.gl/5EC2Q68fadFV59Aq9" target="_blank" rel="noreferrer" className="flex items-start gap-4 p-4 rounded-2xl bg-zinc-50 border border-gray-100 hover:shadow-md transition-shadow group">
+                    <div className="w-12 h-12 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform shrink-0">
                       <MapPin className="w-6 h-6" />
                     </div>
                     <div>
                       <p className="text-sm text-gray-500 font-medium mb-1">PG Location</p>
-                      <p className="text-gray-900 font-semibold leading-snug">Dharmatala Panchuria, Newtown, Kolkata</p>
+                      <p className="text-gray-900 font-semibold leading-snug group-hover:text-indigo-600 transition-colors">
+                        Jagannath Mandir, Karigari Bhawan, near Hazra Kalibari Road, Action Area III, Newtown, Kolkata, Dharmatala Pachuria, West Bengal 700160
+                      </p>
                     </div>
-                  </div>
+                  </a>
                 </div>
               </div>
             </motion.div>
@@ -153,9 +155,9 @@ export default function Contact() {
 
       {/* Full Width Map */}
       <div className="h-[400px] w-full">
-         <iframe 
-            src="https://maps.google.com/maps?q=Dharmatala%20Panchuria,%20Newtown,%20Kolkata&t=&z=15&ie=UTF8&iwloc=&output=embed" 
-            width="100%" height="100%" style={{ border: 0 }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3684.618710030391!2d88.4924561!3d22.555951600000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a020b89cd259dd1%3A0x1c8745027220a0e2!2sMeridian%20Homestay%20%26%20PG!5e0!3m2!1sen!2sin!4v1788345960187!5m2!1sen!2sin" 
+            width="100%" height="100%" style={{ border: 0 }} allowFullScreen="" loading="lazy" referrerPolicy="strict-origin-when-cross-origin"
             title="Meridian Homestay Map"
           ></iframe>
       </div>

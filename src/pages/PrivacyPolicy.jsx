@@ -100,7 +100,7 @@ export default function PrivacyPolicy() {
                 For any questions regarding this Privacy Policy, you can reach the <strong>Meridian Homestay</strong> management team:
               </p>
               <div className="space-y-3 font-semibold text-gray-900">
-                <p>Location: Dharmatala Panchuria, Newtown, Kolkata</p>
+                <p>Location: Jagannath Mandir, Karigari Bhawan, near Hazra Kalibari Road, Action Area III, Newtown, Kolkata, Dharmatala Pachuria, West Bengal 700160</p>
                 <p>WhatsApp: +91 6290381799</p>
                 <p>Call: +91 8282895500 / +91 9051741292</p>
               </div>
